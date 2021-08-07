@@ -1,1 +1,13 @@
-<h1>submit a lyrics</h1>
+<h1>Submit a Lyrics</h1>
+
+
+<form action="{% url 'submit' %}" method="get"> 
+    <label for="artist"> Artist :  </label>
+    <input id="artist" type="text" name="artist">
+    <label for="song"> Song Name :  </label>
+    <input id="song" type="text" name="song">
+    <label for="lyrics"> Lyrics :  </label>
+    <input id="lyrics" type="text" name="lyrics">
+
+    <input type="submit" value="Submit Song">
+</form>
