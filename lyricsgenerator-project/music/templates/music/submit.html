@@ -1,13 +1,9 @@
 <h1>Submit a Lyrics</h1>
 
+<h2>{{note}}</h2>
 
-<form action="{% url 'submit' %}" method="get"> 
-    <label for="artist"> Artist :  </label>
-    <input id="artist" type="text" name="artist">
-    <label for="song"> Song Name :  </label>
-    <input id="song" type="text" name="song">
-    <label for="lyrics"> Lyrics :  </label>
-    <input id="lyrics" type="text" name="lyrics">
-
+<form action="{% url 'submit' %}" method="POST"> 
+    {% csrf_token%}
+    {{musicform}}
     <input type="submit" value="Submit Song">
 </form>
