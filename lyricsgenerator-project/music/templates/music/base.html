@@ -28,7 +28,7 @@
         <title>Music Generator</title>
     </head>
 
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #238a44">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
             <div class="container">
                 <a class="navbar-brand" href="{% url 'home' %}">Music Generator</a>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -37,7 +37,7 @@
                             <a class="nav-link" href="{% url 'submit' %}">Submit Lyrics</a>
                         </li>
                         <li class="nav-item active">
-                                <a class="nav-link" href="{% url 'generate' %}">Generate Lyrics</a>
+                            <a class="nav-link" href="{% url 'generate' %}">Generate Lyrics</a>
                         </li>
                     </ul>
                 </div>
@@ -46,18 +46,6 @@
     
     
     <style>
-        .enableBlur{
-            /* filter: blur(1.2px); */
-            background: url('{% static "drake.jpg" %}') no-repeat; 
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-                background-repeat: no-repeat;
-                filter: blur(8px);
-                -webkit-filter: blur(8px); 
-                
-}
         .bg{
             background: url('{% static "drake.jpg" %}') no-repeat;
             position: absolute;
@@ -71,7 +59,7 @@
             z-index: -1;
             
         }
-        #parent_div {
+        .parent_div {
             position: relative;
             height: 1000;
             width: 1000;
@@ -80,12 +68,12 @@
 
                        
     <body>
-            <div id="parent_div">
-                <div class="bg"></div>
-                <div >
-                    {% block 'body' %}
-                    {% endblock %}
-                </div>
+        <div class="parent_div">
+            <div class="bg"></div>
+            <div >
+                {% block 'body' %}
+                {% endblock %}
             </div>
+        </div>
     </body>
 </html>
