@@ -10,7 +10,6 @@ from .models import Music
 # you can submit different files
 class MusicForm(forms.ModelForm):
 
-
     class Meta:
         model = Music
         fields = ['artist', 'songName', 'lyrics']

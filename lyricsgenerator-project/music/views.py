@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .forms import MusicForm
-from .models import Music
+
 
 # Create your views here.
 def home(request):
@@ -22,4 +22,6 @@ def submit(request):
         return render(request, 'music/submit.html', {'musicform' : form})
 
 def generate(request):
+    # func
     return render(request, 'music/generate.html')
+

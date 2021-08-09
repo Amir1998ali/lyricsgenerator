@@ -1,0 +1,23 @@
+.bg {
+    /* background-repeat: no-repeat;
+    background-size: 2000px 1000px;
+    background-position: top;
+    background-attachment: fixed; */
+
+    /* src="{% static 'drake.jpg' %}" */
+    /* {% static "drake.jpg" %} */
+    /* background-image:url("{% static 'drake.jpg' %}"); */
+    /* color: red; */
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100vh; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
