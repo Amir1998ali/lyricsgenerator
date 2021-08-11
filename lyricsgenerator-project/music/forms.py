@@ -12,5 +12,5 @@ class MusicForm(forms.ModelForm):
 
     class Meta:
         model = Music
-        fields = ['artist', 'songName', 'lyrics']
-        labels = {'artist' : 'Artist' , 'songName' : 'Song Name', 'lyrics' : 'Lyrics'}
+        fields = ['artist', 'songName']
+        labels = {'artist' : 'Artist' , 'songName' : 'Song Name'}

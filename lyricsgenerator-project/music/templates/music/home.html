@@ -1,4 +1,24 @@
 {% extends 'music/base.html'%}
 {% block 'body' %}
-<p>Hello world</p>
+
+<style>
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+        </style>
+        <div class="container">
+                <h1>Welcome to Music Generator! </h1>
+                <br>
+                <h2>You can generate whatever you want using this website.</h2>
+                <a href="{% url 'submit' %}">Start Generating</a>
+        </div>
+
 {% endblock%}
+
