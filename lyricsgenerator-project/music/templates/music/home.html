@@ -1,24 +1,38 @@
 {% extends 'music/base.html'%}
 {% block 'body' %}
-
+{% load static %}
 <style>
+    .bg{
+        background: url('{% static "drake.jpg" %}') no-repeat; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        
+    }
+    .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    
+    align-items: center;
 
-.container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-        </style>
-        <div class="container">
-                <h1>Welcome to Music Generator! </h1>
-                <br>
-                <h2>You can generate whatever you want using this website.</h2>
-                <a href="{% url 'submit' %}">Start Generating</a>
-        </div>
+    justify-content: center; 
+    color: white;
+    }
+</style>
+
+<div class="container">
+    <div class="bg"></div>
+    <h1>Welcome to Music Generator! </h1>
+    <br>
+    <h2>You can generate whatever you want using this website.</h2>
+    <a href="{% url 'submit' %}">Start Generating</a>
+</div>
 
 {% endblock%}
-

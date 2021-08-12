@@ -11,7 +11,7 @@ def submit(request):
         # the image we have here!
         filled_form = MusicForm(request.POST)
         if filled_form.is_valid():
-            note = "Thanks for submitting a new song! The song %s by %s is submitted!" %(filled_form.cleaned_data['songName'], 
+            note = " '%s' by '%s'" %(filled_form.cleaned_data['songName'], 
             filled_form.cleaned_data['artist'],)
             
 
@@ -46,7 +46,7 @@ def submit(request):
             filled_form = MusicForm()
             print(generated)
             _file.close()
-            return render(request, 'music/generate.html', {'tmp' : tmp})
+            return render(request, 'music/generate.html', {'tmp' : tmp, 'note':note})
             
         else :
             
@@ -57,11 +57,7 @@ def submit(request):
         return render(request, 'music/submit.html', {'musicform' : form})
 
 def generate(request):
-    # func
-
-    
     genius = lg.Genius('K1TXu3BGIWFtX6Cxf7ch2XZW95m40-9HMWIo9f0gZaQz16RF-6BXstfVDnOSbTp0', skip_non_songs=True, excluded_terms=["(Remix)", "(Live)"], remove_section_headers=True)
-
     artist = "Eminem"
     def get_lyrics(arr, k):  # Write lyrics of k songs by each artist in arr
         c = 0  # Counter
